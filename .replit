@@ -1,0 +1,8 @@
+modules = ["ruby-3.2"]
+run = "sh -c 'bundle install && ruby lib/main.rb'"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "sh -c 'bundle install && ruby lib/main.rb'"]
